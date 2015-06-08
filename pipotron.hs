@@ -1,3 +1,5 @@
+-- Licence : Apache 2.0
+
 import Control.Monad (replicateM)
 import Data.Array.MArray
 import System.Random
