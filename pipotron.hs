@@ -5,7 +5,7 @@ import System.Random (randomRIO)
 
 -- http://lyah.haskell.fr/demarrons
 
-main = pipotron
+main = pipotronAll
 
 -------------------------------------------------------------------------------
 
