@@ -40,12 +40,19 @@ b = [
 
 c = [
     "Non mais a toi je te parle pas.",
+    "Tu me coupes pas quand je parle.",
+    "Toi je t'ecoute pas.",
+    "Toi je t'ai pas parle",
     "Quid ? C'est quoi quid ?",
     "Un developpeur, ca fait des spec. Sinon, c'est pas un developpeur.",
     "Android c'est de la m***de.",
     "Sous android, on peut pas envoyer de mails",
     "Au fait, il me faut un satellite pour cet apres-midi.",
-    "Ton ecole c'est de la m***de."
+    "Ton ecole c'est de la m***de.",
+    "Un bon debriefing et on acete direct pour tester.",
+    "Vous vouliez pas y aller, on a fait de vous des hommes riches ! (LoL)",
+    "De toute facon, vous etes cadres les gars.",
+    "Je deteste l'electronique"
     ]
 
 d = [
