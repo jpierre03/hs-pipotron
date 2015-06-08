@@ -15,3 +15,14 @@ Pour l'utiliser depuis ghci :
 > pipotron
 "xxxxxxxxx"
 ```
+
+Il est également possible d'obtenir l'ensemble des phrases possibles avec :
+
+```haskell
+> pipotronAll
+"xxxxxxxxx"
+"xxxxxxxxx"
+"xxxxxxxxx"
+...
+"xxxxxxxxx"
+```
