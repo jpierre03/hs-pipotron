@@ -24,13 +24,13 @@ pick xs = randomRIO (0, length xs - 1) >>= return . (xs !!)
 
 -------------------------------------------------------------------------------
 
-a = [
+s1_a = [
     "En tant qu'ingenieur, ",
     "Si tu es ingenieur, ",
     "Lorsque tu es ingenieur, "
     ]
 
-b = [
+s1_b = [
     "tu n'as pas besoin de manger.",
     "tu n'as pas besoin de faire de pause. Avoir un travail qui te plait est suffisant.",
     "tu n'as pas a demander des heures supplementaires. C'est normal de les faire.",
@@ -38,7 +38,7 @@ b = [
     "quid c'est pas pro'."
     ]
 
-c = [
+s2 = [
     "Non mais a toi je te parle pas.",
     "Tu me coupes pas quand je parle.",
     "Toi je t'ecoute pas.",
@@ -55,25 +55,25 @@ c = [
     "Je deteste l'electronique"
     ]
 
-d = [
+s3_a = [
     "Faut demander le SDK ",
     "Ont-ils le SDK ",
     "Ont-ils la spec "
     ]
 
-e = [
+s3_b = [
     "du rapport.",
     "du produit.",
     "du logiciel.",
     "du materiel."
     ]
 
-f = [
+s4_a = [
     "Hey les filles, ",
     "Hey les gars, "
     ]
 
-g = [
+s4_b = [
     " c'est l'heure de bosser.",
     " encore en train de parler ?",
     " la reunion a commencee y a 5 minutes.",
@@ -88,10 +88,10 @@ g = [
 --
 
 pipotronSentences = (
-                     (concatCartProd a b)
-                  ++ c
-                  ++ (concatCartProd d e)
-                  ++ (concatCartProd f g)
+                     s2
+                  ++ (concatCartProd s1_a s1_b)
+                  ++ (concatCartProd s3_a s3_b)
+                  ++ (concatCartProd s4_a s4_b)
                   )
 
 pipotronAll = printAll pipotronSentences
