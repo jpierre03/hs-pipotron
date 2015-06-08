@@ -24,21 +24,7 @@ pick xs = randomRIO (0, length xs - 1) >>= return . (xs !!)
 
 -------------------------------------------------------------------------------
 
-s1_a = [
-    "En tant qu'ingenieur, ",
-    "Si tu es ingenieur, ",
-    "Lorsque tu es ingenieur, "
-    ]
-
-s1_b = [
-    "tu n'as pas besoin de manger.",
-    "tu n'as pas besoin de faire de pause. Avoir un travail qui te plait est suffisant.",
-    "tu n'as pas a demander des heures supplementaires. C'est normal de les faire.",
-    "tu n'as pas besoin d'etre paye. Avoir un travail qui te plait est suffisant.",
-    "quid c'est pas pro'."
-    ]
-
-s2 = [
+s1 = [
     "Non mais a toi je te parle pas.",
     "Tu me coupes pas quand je parle.",
     "Toi je t'ecoute pas.",
@@ -53,6 +39,20 @@ s2 = [
     "Vous vouliez pas y aller, on a fait de vous des hommes riches ! (LoL)",
     "De toute facon, vous etes cadres les gars.",
     "Je deteste l'electronique"
+    ]
+
+s2_a = [
+    "En tant qu'ingenieur, ",
+    "Si tu es ingenieur, ",
+    "Lorsque tu es ingenieur, "
+    ]
+
+s2_b = [
+    "tu n'as pas besoin de manger.",
+    "tu n'as pas besoin de faire de pause. Avoir un travail qui te plait est suffisant.",
+    "tu n'as pas a demander des heures supplementaires. C'est normal de les faire.",
+    "tu n'as pas besoin d'etre paye. Avoir un travail qui te plait est suffisant.",
+    "quid c'est pas pro'."
     ]
 
 s3_a = [
@@ -88,8 +88,8 @@ s4_b = [
 --
 
 pipotronSentences = (
-                     s2
-                  ++ (concatCartProd s1_a s1_b)
+                     s1
+                  ++ (concatCartProd s2_a s2_b)
                   ++ (concatCartProd s3_a s3_b)
                   ++ (concatCartProd s4_a s4_b)
                   )
