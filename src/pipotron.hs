@@ -17,8 +17,8 @@ main = pipotronAll
 cartProd :: [String] -> [String] -> [(String, String)]
 cartProd xs ys = [(x,y) | x <- xs, y <- ys]
 
-concatCartProd :: [String] -> [String] -> [(String)]
-concatCartProd xs ys = [(x ++ y) | x <- xs, y <- ys]
+concatCartProd :: [String] -> String -> [String] -> [(String)]
+concatCartProd xs separator ys = [(x ++ separator ++ y) | x <- xs, y <- ys]
 
 printAll :: [String] -> IO ()
 printAll xs = if null xs        -- If the list is empty
@@ -34,9 +34,9 @@ pick xs = randomRIO (0, length xs - 1) >>= return . (xs !!)
 pipotronSentences :: [String]
 pipotronSentences = (
                      s1
-                  ++ (concatCartProd s2_a s2_b)
-                  ++ (concatCartProd s3_a s3_b)
-                  ++ (concatCartProd s4_a s4_b)
+                  ++ (concatCartProd s2_a " " s2_b)
+                  ++ (concatCartProd s3_a " " s3_b)
+                  ++ (concatCartProd s4_a " " s4_b)
                   )
 
 pipotronAll :: IO ()
