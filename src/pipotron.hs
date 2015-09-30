@@ -7,15 +7,17 @@ import System.Random (randomRIO)
 
 -- http://lyah.haskell.fr/demarrons
 
+main :: IO ()
 main = pipotronAll
 
 -------------------------------------------------------------------------------
-
+cartProd :: [String] -> [String] -> [(String, String)]
 cartProd xs ys = [(x,y) | x <- xs, y <- ys]
 
+concatCartProd :: [String] -> [String] -> [(String)]
 concatCartProd xs ys = [(x ++ y) | x <- xs, y <- ys]
 
-
+printAll :: [String] -> IO ()
 printAll xs = if null xs        -- If the list is empty
     then return ()              -- then we're done, so we quit.
     else do print (head xs)     -- Otherwise, print the first element
@@ -26,6 +28,7 @@ pick xs = randomRIO (0, length xs - 1) >>= return . (xs !!)
 
 -------------------------------------------------------------------------------
 
+s1 :: [String]
 s1 = [
     "Non mais a toi je te parle pas.",
     "Tu me coupes pas quand je parle.",
@@ -43,12 +46,14 @@ s1 = [
     "Je deteste l'electronique"
     ]
 
+s2_a :: [String]
 s2_a = [
     "En tant qu'ingenieur, ",
     "Si tu es ingenieur, ",
     "Lorsque tu es ingenieur, "
     ]
 
+s2_b :: [String]
 s2_b = [
     "tu n'as pas besoin de manger.",
     "tu n'as pas besoin de faire de pause. Avoir un travail qui te plait est suffisant.",
@@ -57,12 +62,14 @@ s2_b = [
     "quid c'est pas pro'."
     ]
 
+s3_a :: [String]
 s3_a = [
     "Faut demander le SDK ",
     "Ont-ils le SDK ",
     "Ont-ils la spec "
     ]
 
+s3_b :: [String]
 s3_b = [
     "du rapport.",
     "du produit.",
@@ -70,11 +77,13 @@ s3_b = [
     "du materiel."
     ]
 
+s4_a :: [String]
 s4_a = [
     "Hey les filles, ",
     "Hey les gars, "
     ]
 
+s4_b :: [String]
 s4_b = [
     " c'est l'heure de bosser.",
     " encore en train de parler ?",
@@ -89,6 +98,7 @@ s4_b = [
 --"C'est pas pro"
 --
 
+pipotronSentences :: [String]
 pipotronSentences = (
                      s1
                   ++ (concatCartProd s2_a s2_b)
@@ -96,8 +106,12 @@ pipotronSentences = (
                   ++ (concatCartProd s4_a s4_b)
                   )
 
+pipotronAll :: IO ()
 pipotronAll = printAll pipotronSentences
 
+pipotron :: IO String
 pipotron = pick pipotronSentences
 
+cpTrolleur :: IO String
 cpTrolleur = pipotron
+
