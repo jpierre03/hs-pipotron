@@ -26,9 +26,9 @@ s1 = [
 
 s2_a :: [String]
 s2_a = [
-    "En tant qu'ingenieur, ",
-    "Si tu es ingenieur, ",
-    "Lorsque tu es ingenieur, "
+    "En tant qu'ingenieur,",
+    "Si tu es ingenieur,",
+    "Lorsque tu es ingenieur,"
     ]
 
 s2_b :: [String]
@@ -42,9 +42,9 @@ s2_b = [
 
 s3_a :: [String]
 s3_a = [
-    "Faut demander le SDK ",
-    "Ont-ils le SDK ",
-    "Ont-ils la spec "
+    "Faut demander le SDK",
+    "Ont-ils le SDK",
+    "Ont-ils la spec"
     ]
 
 s3_b :: [String]
@@ -57,16 +57,16 @@ s3_b = [
 
 s4_a :: [String]
 s4_a = [
-    "Hey les filles, ",
-    "Hey les gars, "
+    "Hey les filles,",
+    "Hey les gars,"
     ]
 
 s4_b :: [String]
 s4_b = [
-    " c'est l'heure de bosser.",
-    " encore en train de parler ?",
-    " la reunion a commencee y a 5 minutes.",
-    " on part pas a 18h. On reste jusqu'a 19-20h. C'est comme ca.",
-    " si ca continue comme ca, vous allez vous faire virer."
+    "c'est l'heure de bosser.",
+    "encore en train de parler ?",
+    "la reunion a commencee y a 5 minutes.",
+    "on part pas a 18h. On reste jusqu'a 19-20h. C'est comme ca.",
+    "si ca continue comme ca, vous allez vous faire virer."
     ]
 
